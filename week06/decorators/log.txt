@@ -1,0 +1,4 @@
+decorated was called at 2018-04-16 20:00:53.582309
+something_heavy was called and took 2.0 seconds to complete
+get_lower was called at 2018-04-16 20:01:40.269153
+something_heavy was called and took 2.0 seconds to complete

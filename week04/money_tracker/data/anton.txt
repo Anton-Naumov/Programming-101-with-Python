@@ -1,0 +1,31 @@
+=== 01-01-2012 ===
+12.5, Sell Book, New Income
+=== 01-01-2018 ===
+10000, Paycheck, New Income
+5000, computer, New Expense
+=== 22-03-2018 ===
+760, Salary, New Income
+5.5, Eating Out, New Expense
+34, Clothes, New Expense
+41.79, Food, New Expense
+12, Eating Out, New Expense
+7, House, New Expense
+14, Pets, New Expense
+112.4, Bills, New Expense
+21.5, Transport, New Expense
+=== 23-03-2018 ===
+50, Savings, New Income
+200, Deposit, New Income
+200000, house, New Income
+15, Food, New Expense
+5, Sports, New Expense
+=== 12-12-2018 ===
+100000, AUDI A7, New Income
+12000, Salary, New Income
+206, House, New Expense
+50000, Car, New Expense
+=== 23-12-2018 ===
+150000, Car, New Expense
+=== 01-01-2019 ===
+50000, Salary, New Income
+25000, Rolex, New Expense

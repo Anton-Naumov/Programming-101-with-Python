@@ -1,0 +1,78 @@
+#:kivy 1.10.0
+#: import main gui
+#: import ListAdapter kivy.adapters.listadapter.ListAdapter
+#: import ListItemButton kivy.uix.listview.ListItemButton
+
+
+<SongsListButton>:
+    selected_color: 0, .7, 1, 1
+    deselected_color: 0, 0, 0, 0
+    color: 0, 0, 0, 1
+
+
+<PlayerGUI>:
+    size_y: 2 * self.width / 5
+    size_hint: 1, 1
+    background_color: 1, 1, 1, 1
+    songs_list: songs_list_view
+    song_time: song_time_label
+
+    Button:
+        pos: self.parent.width / 5, self.parent.width / 50
+        size: self.parent.width / 5, self.parent.width / 5
+        size_hint: None, None
+        background_normal: ''
+        background_down: 'images/gray.png'
+        background_color: .31, .31, .31, 1
+        on_release: root.play_song()
+        Image:
+            source: 'images/play.png'
+            y: self.parent.y
+            x: self.parent.x
+            size: self.parent.width, self.parent.height
+            allow_stretch: False
+
+    Button:
+        pos: 2 * self.parent.width / 5, self.parent.width / 50
+        size: self.parent.width / 5, self.parent.width / 5
+        size_hint: None, None
+        background_normal: ''
+        background_down: 'images/gray.png'
+        background_color: .31, .31, .31, 1
+        on_release: root.pause_song()
+        Image:
+            source: 'images/pause.png'
+            y: self.parent.y
+            x: self.parent.x
+            size: self.parent.width, self.parent.height
+            allow_stretch: False
+
+    Button:
+        pos: 3 * self.parent.width / 5, self.parent.width / 50
+        size: self.parent.width / 5, self.parent.width / 5
+        size_hint: None, None
+        background_normal: ''
+        background_down: 'images/gray.png'
+        background_color: .31, .31, .31, 1
+        on_release: root.stop_song()
+        Image:
+            source: 'images/stop.png'
+            y: self.parent.y
+            x: self.parent.x
+            size: self.parent.width, self.parent.height
+            allow_stretch: False
+
+    Label:
+        id: song_time_label
+        pos: self.parent.width - self.parent.width / 5, self.parent.width / 50
+        size: self.parent.width / 5, self.parent.width / 50
+        size_hint: None, None
+        color: 0, 0, 0, 1
+
+    ListView:
+        id: songs_list_view
+        pos: 15, self.parent.width / 50 + self.parent.width / 5
+        size: self.parent.width - 30, self.parent.height - (self.parent.width / 50 + self.parent.width / 5)
+        size_hint: None, None
+        adapter:
+            ListAdapter(data=[], cls=main.SongsListButton)
