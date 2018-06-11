@@ -17,12 +17,13 @@ class SongsListButton(ListItemButton):
 
 class PlayerGUI(FloatLayout):
     player = MusicPlayer()
-    player.load_playlist(path='/home/anton/Music/G-Eazy - The Beautiful & Damned (2017) [320]')
     songs_list = ObjectProperty()
     song_time = ObjectProperty()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        directory_to_craw = input('Directory to craw for mp3 files >>>')
+        self.player.load_playlist(path=directory_to_craw)
         self.songs_list.adapter.data.extend(self.player.get_all_songs_list())
         time_thread = Thread(target=self.print_curr_song_time, daemon=True)
         time_thread.start()
